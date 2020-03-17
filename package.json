@@ -2,15 +2,16 @@
   "name": "chat-api",
   "version": "1.0.0",
   "description": "chat api",
-  "main": "api/index.js",
+  "main": "api/app.js",
   "scripts": {
-    "dev": "nodemon api/index.js --watch api",
-    "start": "node api/index.js",
+    "dev": "nodemon api/app.js --watch api",
+    "start": "node api/app.js",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "amqplib": "^0.5.5",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
