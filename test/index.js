@@ -13,11 +13,12 @@ rabbitConn(function(connection) {
     }
 
     // consume message from queue
-    channel.consume('messages', function (msg) {
+    const queue = 'messages'
+    channel.consume(queue, function (msg) {
       console.log('.....');
       setTimeout(function(){
         console.log("Message:", msg.content.toString())
-      },4000)
+      },2000)
       },{ noAck: true }
     )
 
